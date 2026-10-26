@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Experience | Aida Khaleghi</title>
+  <meta name="description" content="Experience of Aida Khaleghi: research assistant and graduate researcher in medical imaging, and AI engineer at Vida Medicals.">
+  <meta property="og:title" content="Experience | Aida Khaleghi">
+  <meta property="og:description" content="Experience of Aida Khaleghi: research assistant and graduate researcher in medical imaging, and AI engineer at Vida Medicals.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#f5f8fa">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23b02a6b'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='15' font-weight='700' text-anchor='middle' fill='white'%3EAK%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="wordmark" href="index.html">Aida Khaleghi</a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="projects.html">Projects</a>
+        <a href="experience.html" aria-current="page">Experience</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="cv.html">CV</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <div class="wrap">
+
+      <div class="page-head">
+        <h1>Experience</h1>
+        <p>Research positions and industry work in machine learning and medical imaging.</p>
+      </div>
+
+      <section class="section">
+        <h2>Research experience</h2>
+      <div class="entry">
+        <div class="entry-meta">Mar 2026 to present</div>
+        <div class="entry-body">
+          <h3>Research Assistant</h3>
+          <p class="entry-where">Kerman Graduate University of Technology, Kerman, Iran. Supervisor: Dr. Maryam Amoozegar.</p>
+          <ul>
+            <li>Designed a hybrid network built on IFISTA-ROTAB, an online tensor-based background subtraction method that separates each frame into a low-rank background and a sparse foreground.</li>
+            <li>Replaced two update steps with a ConvLSTM and a convolutional network. Kept the recursive least squares updates of the background subspace factors.</li>
+            <li>Implemented and trained the network as the sole technical contributor. The model is fully online and unsupervised.</li>
+            <li>Improved the F-measure by at least 0.1 over IFISTA-ROTAB on LASIESTA and CDNet2014.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="entry-meta">Jan 2025 to present</div>
+        <div class="entry-body">
+          <h3>Graduate Researcher</h3>
+          <p class="entry-where">Data Mining Lab, Iran University of Science and Technology, Tehran, Iran. Supervisors: Prof. Behrouz Minaei-Bidgoli and Dr. Maryam Amoozegar.</p>
+          <ul>
+            <li>Designing a deep unfolding network for anomaly detection in medical imaging modalities such as MRI and CT. It keeps the interpretability of the underlying iterative solver, unlike standard deep learning networks.</li>
+            <li>Leading problem formulation, architecture design, PyTorch implementation, and evaluation on medical datasets. Experiments are in progress.</li>
+            <li>Reviewed prompt tuning techniques for large language models for my master seminar.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="entry-meta">Feb 2024 to Jul 2024</div>
+        <div class="entry-body">
+          <h3>Undergraduate Researcher</h3>
+          <p class="entry-where">Shahid Bahonar University of Kerman, Kerman, Iran. Supervisor: Prof. Mahdi Eftekhari.</p>
+          <ul>
+            <li>Adapted a heterogeneous graph neural network method for text classification from English to Persian, in a team of 3 students.</li>
+            <li>Rebuilt the text-to-graph pipeline with fastText word embeddings and Hazm. Each review becomes a graph of word, sentence, tag, and dependency nodes.</li>
+            <li>Trained and evaluated a heterogeneous graph attention network on the Digikala and SnappFood review datasets.</li>
+          </ul>
+        </div>
+      </div>
+      </section>
+
+      <section class="section">
+        <h2>Industry experience</h2>
+      <div class="entry">
+        <div class="entry-meta">Aug 2025 to Dec 2025<br>Remote</div>
+        <div class="entry-body">
+          <h3>AI Engineer</h3>
+          <p class="entry-where">Vida Medicals, Canada</p>
+          <ul>
+            <li>Raised breast asymmetry classification accuracy on mammography from 60% to 82%. I replaced a handcrafted feature pipeline with transfer learning. I then added a multi-task objective with auxiliary labels to handle scarce data.</li>
+            <li>Developed breast tumor segmentation models with nnU-Net and YOLO. They reach a Dice score of 0.83 on an internal mammography dataset.</li>
+            <li>Built and deployed a Streamlit annotation tool. Radiologists used it to label mammography images under a shared protocol.</li>
+          </ul>
+        </div>
+      </div>
+      </section>
+
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>&copy; 2026 Aida Khaleghi</span>
+      <span>Tehran, Iran</span>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects | Aida Khaleghi</title>
+  <meta name="description" content="Selected projects by Aida Khaleghi: single-cell perturbation prediction, drug–drug interaction prediction, breast ultrasound analysis, and instance segmentation under adverse weather.">
+  <meta property="og:title" content="Projects | Aida Khaleghi">
+  <meta property="og:description" content="Selected projects by Aida Khaleghi: single-cell perturbation prediction, drug–drug interaction prediction, breast ultrasound analysis, and instance segmentation under adverse weather.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#f5f8fa">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23b02a6b'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='15' font-weight='700' text-anchor='middle' fill='white'%3EAK%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="wordmark" href="index.html">Aida Khaleghi</a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="experience.html">Experience</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="cv.html">CV</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <div class="wrap">
+
+      <div class="page-head">
+        <h1>Projects</h1>
+        <p>Selected course and independent projects. Each entry gives the setup, the main result, and the tools. More code is on <a href="https://github.com/AidaKhaleghi">my GitHub</a>.</p>
+      </div>
+
+      <section class="section">
+      <div class="entry">
+        <div class="entry-meta">Computational biology</div>
+        <div class="entry-body">
+          <h3>Perturbench: predicting unseen double gene perturbations</h3>
+          <p>I benchmarked a CPA-style conditional variational autoencoder (VAE) against additive and mean baselines. The task is to predict the effect of double gene perturbations that were not seen in training. The data come from the Norman 2019 Perturb-seq screen.</p>
+          <p>I used validation-only model selection, 5 random seeds, and bootstrap confidence intervals.</p>
+          <p class="result">The additive baseline stayed best, with an MSE of 0.045 against 0.057 for the best CPA variant.</p>
+          <p>My analysis showed that this CPA variant has a collapsed latent space. Its error rises sharply for test pairs that are dissimilar to the training perturbations.</p>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="entry-meta">Graph learning</div>
+        <div class="entry-body">
+          <h3>Drug–drug interaction prediction with graph neural networks</h3>
+          <p>I formulated drug–drug interaction prediction as link prediction on the ogbl-ddi graph. The model uses a GraphSAGE encoder and an MLP pair scorer. I compared binary cross-entropy (BCE) and AUC losses and tuned hyperparameters on validation data across several seeds.</p>
+          <p class="result">Test Hits@20 is 0.896 on a 500-drug subset. It is 0.845 when the model is transferred without re-tuning to 2,134 drugs.</p>
+          <p class="stack">GraphSAGE, ogbl-ddi</p>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="entry-meta">Medical imaging</div>
+        <div class="entry-body">
+          <h3>Multi-task breast ultrasound analysis</h3>
+          <p>I extended a single-task MONAI segmentation baseline into a multi-task U-Net. It segments breast tumors and classifies them as benign or malignant at the same time. The classification head sits on the shared bottleneck. I used the BUS-BRA dataset (1,875 images) with patient-grouped splits.</p>
+          <p class="result">On a held-out test set the model reaches a Dice score of 0.82 and a ROC-AUC of 0.84.</p>
+          <p class="stack">MONAI, U-Net. <a href="https://github.com/AidaKhaleghi/Breast_Tumor_Segmentation">Code on GitHub</a>.</p>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="entry-meta">Computer vision</div>
+        <div class="entry-body">
+          <h3>Instance segmentation under adverse weather</h3>
+          <p>I generated a 3,704-frame instance segmentation dataset in the CARLA simulator. It covers clear, rain, fog, and night conditions. GroundedSAM produced the labels. I split the data by ego-vehicle position to test spatial generalization. I compared YOLOv11n-seg and YOLOv11m-seg.</p>
+          <p class="result">FP16 TensorRT gives a 4.1&times; inference speedup, from 11.9 ms to 2.9 ms.</p>
+          <p class="stack">CARLA, GroundedSAM, YOLOv11, TensorRT</p>
+        </div>
+      </div>
+      </section>
+
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>&copy; 2026 Aida Khaleghi</span>
+      <span>Tehran, Iran</span>
+    </div>
+  </footer>
+</body>
+</html>
